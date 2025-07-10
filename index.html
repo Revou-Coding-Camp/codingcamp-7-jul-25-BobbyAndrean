@@ -3,20 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Todo-List Bobby_A_J</title>
     <link rel="style" href="css/style.css">
 </head>
-<body>
+<body class="flex flex-col items-center justify-evenly min-h-screen">  
     <header>
         <h1>Todo List</h1>
     </header>
 
-    <main>
+    <main class="py-[16px] rounded">
+        <form>
+            <input type="text" id="task-input" class="border rounded p-2 bg-white-500" placeholder="Add a todo..">
+            <input type="datetime" id="task-date" class="border rounded p-2 bg-white-500" placeholder="dd/mm/yy">
+            <button type="button" class="rounded w-[50px] bg-blue-500 text-white p-2 " onclick="addTask()">+</button>
+        </form>
 
+        <section class="flex justify-between p-[8px]">
+            <div class="flex gap-[8px]">
+                <button class="bg-blue-500">Filter</button>
+                <button class="bg-red-500">Delete All</button>  
+            </div>
+        </section>
+
+        <section class="flex justify-between p-[8px]">
+            <div id="task-list">
+                <p>Task is Empty</p>
+            </div>
+        </section>
     </main>
 
     <footer>
         <span>2025 BobbyAndrean. All rights reserved.</span>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
